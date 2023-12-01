@@ -45,9 +45,9 @@ const homePageSlice = createSlice({
     }
 });
 
-export const selectHomePageFeed = state.homePage.homePageFeed;
-export const selectIsLoading = state.homePage.isLoading;
-export const selectHasError = state.homePage.hasError;
-export const selectError = state.homePage.error;
+export const selectHomePageFeed = (state) => state.homePage.homePageFeed;
+export const selectIsLoading = (state) => state.homePage.isLoading;
+export const selectHasError = (state) => state.homePage.hasError;
+export const selectError = (state) => state.homePage.error;
 
 export default homePageSlice.reducer;

@@ -16,11 +16,13 @@ export default function HomePage() {
 
     //load the relevant feed when the page loads, the feed changes, or the search parameters change
     useEffect(() => {
-        if(searchParams.size !== 0) {
+        const check = searchParams.size;
+        check ? dispatch(loadHomePageFeed(searchParams)) : dispatch(loadHomePageFeed(''));
+        /*if(searchParams.size !== 0) {
             dispatch(loadHomePageFeed(searchParams));
         } else {
             dispatch(loadHomePageFeed(''))
-        }
+        };*/
     }, [feed, searchParams]);
 
     //scroll to the top of the page when the feed changes

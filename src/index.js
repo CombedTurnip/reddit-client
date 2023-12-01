@@ -2,7 +2,8 @@ import React from 'react';
 import App from './App';
 import ErrorPage from './pages/error-page.js';
 import HomePage from './modules/HomePage/HomePage.js';
-
+import { Provider } from 'react-redux';
+import { store } from './app/store.js';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import {
@@ -30,7 +31,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 )
 
