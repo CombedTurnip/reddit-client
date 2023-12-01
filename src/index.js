@@ -1,7 +1,7 @@
 import React from 'react';
 import App from './App';
 import ErrorPage from './pages/error-page.js';
-import HomePage from './pages/home-page.js';
+import HomePage from './modules/HomePage/HomePage.js';
 
 import reportWebVitals from './reportWebVitals';
 import './index.css';
